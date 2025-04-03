@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhilesh Pandey - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Animate.css for animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        .navbar {
+            background-color: orange !important;
+            height: 70px;
+        }
+
+        .navbar a {
+            color: white
+        }
+
+        .txt {
+            text-align: center;
+            color: white;
+        }
+
+        p {
+            text-align: justify;
+            color: white;
+        }
+
+        .img {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background-image: url('mypic.jpg');
+            /* Replace with your image */
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        nav ul li a {
+            font-size: 1.1rem;
+            /* transition: 2s; */
+            border-radius: 10px;
+
+        }
+
+        nav ul li a:hover {
+            color: orange !important;
+            font-size: 1.1rem;
+            /* transition: 2s; */
+            background: black;
+            border-radius: 10px;
+        }
+
+        .container-fluid {
+            margin-bottom: 30px;
+        }
+
+        .section-title,
+        h1 {
+            margin-top: 50px;
+            font-weight: bold;
+            color: orange;
+        }
+
+        .project-card {
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .hero {
+            background: #0d6efd;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        a {
+            text-decoration: none;
+            color: orange
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="container-fluid ">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary bg-info navbar-light fw-bold">
+                <div class="container-fluid">
+                    <a class="navbar-brand pt-3 " href="#">Akhilesh Pandey</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 pt-3 m-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#skills">skill</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#projects">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2 mt-3" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button class="btn btn-outline-light  text-dark fw-bold mt-3" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="text-center py-5">
+        <div class="container">
+            <h1 class="display-4 animate__animated animate__fadeIn fw-bold">Welcome to My Portfolio</h1>
+            <p class="lead animate__animated animate__fadeIn text-light text-center">Web Developer | PHP Laravel | .NET
+                MVC |
+                JavaScript</p>
+            <a href="#projects" class="btn btn-outline btn-lg animate__animated animate__fadeIn bg-warning">See My
+                Work</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class=" py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 txt">
+                    <h1 class="animate__animated animate__fadeIn">I am a PHP Laravel Developer</h1>
+                    <h2 class="animate__animated animate__fadeIn text-light">Akhilesh Pandey</h2>
+                    <h3 class="animate__animated animate__fadeIn text-light">Diploma in Computer Science & Engineering
+                    </h3>
+                </div>
+                <div class="col-md-6 txt">
+                    <div class="img m-5 m-auto"></div>
+                </div>
+            </div>
+
+            <h2 class="section-title text-center animate__animated animate__fadeIn">About Me</h2>
+            <div class="animate__animated animate__fadeIn text-light p-2 ">
+                <p>I am Akhilesh Pandey, a dedicated computer science student at Government Polytechnic Tarabganj Gonda.
+                    My
+                    expertise spans multiple web development technologies, including PHP (Laravel), .NET MVC,
+                    JavaScript,
+                    CSS, HTML, and MySQL. Passionate about technology and continuous learning, I strive to build
+                    efficient,
+                    scalable web applications with a strong emphasis on UI/UX design.</p>
+
+                <p>My journey in tech has been driven by curiosity and the desire to push the boundaries of what's
+                    possible.
+                    I am constantly exploring new frameworks and technologies, ensuring that my skill set remains up to
+                    date
+                    in the ever-evolving field of web development. Whether it's crafting dynamic and responsive
+                    interfaces
+                    or optimizing backend systems, I bring a problem-solving mindset to every project I work on.</p>
+
+                <p>My ability to bridge the gap between design and functionality sets me apart. I recognize that a
+                    well-designed UI enhances user experience and directly contributes to the success of an application.
+                    By
+                    blending creativity with technical expertise, I develop applications that are not only visually
+                    appealing but also efficient and user-friendly.</p>
+
+                <p>As a B.Tech student in IT, my academic journey complements my practical experience, providing me with
+                    a
+                    solid foundation in programming, databases, and software engineering principles. My education at
+                    Government Polytechnic Tarabganj Gonda has further strengthened my analytical thinking and
+                    problem-solving abilities.</p>
+
+                <p>Beyond just coding, I have a keen interest in best practices for software development, including
+                    clean
+                    code, design patterns, and performance optimization. My adaptability allows me to quickly learn and
+                    integrate emerging technologies into my projects, making me a valuable asset in any development
+                    environment.</p>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+
+
+    <section id="skills" class="container mt-5 text-light" data-aos="fade-up">
+        <h2 class="section-title">Technical Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript, Bootstrap, jQuery</li>
+            <li>PHP Core, Laravel, .NET MVC</li>
+            <li>MySQL, API Development</li>
+            <li>Version Control: GitHub, Netlify</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="container mt-5 text-light" data-aos="fade-up">
+        <h2 class="section-title">Projects</h2>
+        <ul>
+            <li>Live Project at Ekana Technologies (PHP Laravel)</li>
+            <li>10MinZepto E-Commerce Project (.NET MVC)</li>
+            <li>Ondjango LMS Project (PHP Laravel)</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="container mt-5 text-light" data-aos="fade-up">
+        <h2 class="section-title">Contact Me</h2>
+        <p>Email: <a href="mailto:goluakhi@gmail.com">goluakhi@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/akhileshpandey98" target="_blank">GitHub Profile</a></p>
+        <p>LinkedIn: <a href="https://in.linkedin.com/in/akhilesh-pandey-027324287" target="_blank">LinkedIn
+                Profile</a></p>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-3 m-auto">
+                    <a href="akhilesh_pandey_php_laravel_cv.pdf"
+                        class="download-btn text-center fw-bold fs-1 btn btn-outline-light " download>
+                        Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class=" text-white text-center py-3 mt-5">
+        &copy; 2025 Akhilesh Pandey | All Rights Reserved
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
+
+</body>
+
+</html>
