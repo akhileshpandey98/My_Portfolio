@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhilesh Pandey - Portfolio</title>
+    <link rel="icon" type="image/png" href="mypic.jpg">
+   <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Bundle JS (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Animate.css for animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <style>
+        .bubble {
+            position: fixed;
+            bottom: -100px;
+            border-radius: 50%;
+            background: rgba(173, 216, 230, 0.7);
+            animation: rise linear infinite;
+            pointer-events: none;
+            /* Let clicks pass through */
+            z-index: 0;
+        }
+
+        #bubble-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        body {
+            background-color: black;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        .navbar {
+            height: 70px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: #ffff00 !important;
+            text-shadow:
+                0 0 5px #ffff00,
+                0 0 10px #ffff00,
+                0 0 20px #ccff00,
+                0 0 40px #ccff00,
+                0 0 60px #ccff00;
+        }
+
+        .navbar a {
+            text-shadow:
+                0 0 5px #ffff00,
+                0 0 10px #ffff00,
+                0 0 20px #ccff00,
+                0 0 40px #ccff00,
+                0 0 60px #ccff00;
+        }
+
+        .txt {
+            text-align: center;
+            color: white;
+        }
+
+        p {
+            text-align: justify;
+            color: white;
+        }
+
+
+        .img {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            background-image: url('mypic.jpg');
+            /* Replace with your image */
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            margin: auto;
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 5px #ffff00,
+                0 0 10px #ffff00,
+                0 0 20px #ccff00,
+                0 0 40px #ccff00,
+                0 0 60px #ccff00;
+
+        }
+
+
+
+
+        nav ul li a {
+            font-size: 1.1rem;
+            border-radius: 10px;
+            ;
+
+        }
+
+        nav ul li a:hover {
+            text-shadow:
+                0 0 5px #ffff00,
+                0 0 10px #ffff00,
+                0 0 20px #ccff00,
+                0 0 40px #ccff00,
+                0 0 60px #ccff00;
+            background: black;
+            color: white !important;
+            border-radius: 10px;
+        }
+
+        .container-fluid {
+            margin-bottom: 30px;
+        }
+
+        .section-title,
+        h1 {
+            margin-top: 50px;
+            font-weight: bold;
+            font-size: 2.5rem;
+            color: white;
+            text-shadow:
+                0 0 5px #ffff00,
+                0 0 10px #ffff00,
+                0 0 20px #ccff00,
+                0 0 40px #ccff00,
+                0 0 60px #ccff00;
+        }
+
+        .project-card {
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            /* margin-bottom: 50px; */
+        }
+
+        a {
+            text-decoration: none;
+            color: orange
+        }
+
+
+        .download-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: auto;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: white;
+        }
+
+        @media (max-width: 768px) {
+            .img {
+                height: 200px;
+                width: 200px;
+            }
+
+            .hero {
+                padding: 50px 20px;
+            }
+
+            .navbar {
+                height: auto;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .img {
+                height: 150px;
+                width: 150px;
+            }
+
+            .download-btn {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+
+        #animated-text {
+            display: inline-block;
+            min-height: 50px;
+            /* Adjust based on font-size */
+        }
+
+
+        .neon-yellow {
+            color: white;
+            text-shadow:
+                0 0 5px #ffff00,
+                0 0 10px #ffff00,
+                0 0 20px #ccff00,
+                0 0 40px #ccff00,
+                0 0 60px #ccff00;
+        }
+
+        .bg-neon-yellow {
+            color: white;
+            /* background: white; */
+            text-shadow:
+                0 0 5px #ffff00,
+                0 0 10px #ffff00,
+                0 0 20px #ccff00,
+                0 0 40px #ccff00,
+                0 0 60px #ccff00;
+        }
+
+        .btn-outline-dark {
+            color: black;
+            border-color: black;
+            text-shadow:
+                0 0 5px #ffff00,
+                0 0 10px #ffff00,
+                0 0 20px #ccff00,
+                0 0 40px #ccff00,
+                0 0 60px #ccff00;
+        }
+
+        .typewriter-container {
+  height: 50px; /* or whatever is enough for your text */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div id="bubble-container"></div>
+
+    <!-- Navbar -->
+    <div class="container-fluid ">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary bg-info navbar-light fw-bold">
+                <div class="container-fluid">
+                    <a class="navbar-brand pt-3 fs-2" href="#">Akhilesh Pandey</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 pt-3 m-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#skills">skill</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#projects">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control  me-2 mt-3 " type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button class="btn btn-outline-dark fw-bold mt-3 bg-neon-yellow"
+                                type="submit">Search</button>
+
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="text-center py-5">
+        <div class="container">
+            <!--  "Welcome to My Portfolio" -->
+            <p class="lead text-light text-center typewriter-container ">
+                <span id="animated-text" class="fw-bold display-5 neon-yellow  typewriter-text"></span>
+            </p>
+            <script>
+                const roles = [
+                    "Welcome to My Portfolio"
+                ];
+
+                let currentIndex = 0;
+                const textElement = document.getElementById("animated-text");
+
+                function typeWriter(text, i = 0) {
+                    if (i < text.length) {
+                        textElement.innerHTML = text.substring(0, i + 1);
+                        setTimeout(() => typeWriter(text, i + 1), 100);
+                    } else {
+                        setTimeout(eraseText, 1500);
+                    }
+                }
+
+                function eraseText(i = roles[currentIndex].length) {
+                    if (i > 0) {
+                        textElement.innerHTML = roles[currentIndex].substring(0, i - 1);
+                        setTimeout(() => eraseText(i - 1), 50);
+                    } else {
+                        currentIndex = (currentIndex + 1) % roles.length;
+                        setTimeout(() => typeWriter(roles[currentIndex]), 300);
+                    }
+                }
+
+                typeWriter(roles[currentIndex]);
+            </script>
+
+            <!-- Web Developer | PHP Laravel | .NET MVC | JavaScript -->
+            <p class="lead text-light text-center fw-bold fs-3">
+                <span id="fade-text"></span>
+            </p>
+
+            <script>
+                const titles = [
+                    "Web Developer | PHP Laravel | .NET MVC | JavaScript..."
+                ];
+
+                let index = 0;
+                const fadeText = document.getElementById("fade-text");
+
+                function changeText() {
+                    fadeText.classList.remove("animate__fadeIn");
+                    fadeText.classList.add("animate__fadeOut");
+
+                    setTimeout(() => {
+                        fadeText.textContent = titles[index];
+                        fadeText.classList.remove("animate__fadeOut");
+                        fadeText.classList.add("animate__fadeIn");
+
+                        index = (index + 1) % titles.length;
+                    }, 500);
+                }
+
+                fadeText.textContent = titles[index];
+                fadeText.classList.add("animate__animated", "animate__fadeIn");
+
+                setInterval(changeText, 3000);
+            </script>
+
+            <!-- My Work -->
+            <a href="#projects"
+                class="btn btn-outline-light btn-lg animate__animated animate__fadeIn fw-bold bg-neon-yellow fs-4">See My Work</a>
+        </div>
+    </header>
+    <!-- End Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class=" py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 txt">
+                    <h1 class="animate__animated animate__fadeIn">I am a PHP Laravel Developer</h1>
+                    <h2 class="animate__animated animate__fadeIn text-light">Akhilesh Pandey</h2>
+                    <h3 class="animate__animated animate__fadeIn text-light">Bachelor of Technology in Information
+                        Technology
+                    </h3>
+                </div>
+                <div class="col-md-6 txt">
+                    <div class="img m-5 m-auto"></div>
+                </div>
+            </div>
+
+            <h2 class="section-title text-center animate__animated animate__fadeIn">About Me</h2>
+            <div class="animate__animated animate__fadeIn text-light p-2 ">
+                <p>I am Akhilesh Pandey, a dedicated computer science student at Government Polytechnic Tarabganj Gonda.
+                    My
+                    expertise spans multiple web development technologies, including PHP (Laravel), .NET MVC,
+                    JavaScript,
+                    CSS, HTML, and MySQL. Passionate about technology and continuous learning, I strive to build
+                    efficient,
+                    scalable web applications with a strong emphasis on UI/UX design.</p>
+
+                <p>My journey in tech has been driven by curiosity and the desire to push the boundaries of what's
+                    possible.
+                    I am constantly exploring new frameworks and technologies, ensuring that my skill set remains up to
+                    date
+                    in the ever-evolving field of web development. Whether it's crafting dynamic and responsive
+                    interfaces
+                    or optimizing backend systems, I bring a problem-solving mindset to every project I work on.</p>
+
+                <p>My ability to bridge the gap between design and functionality sets me apart. I recognize that a
+                    well-designed UI enhances user experience and directly contributes to the success of an application.
+                    By
+                    blending creativity with technical expertise, I develop applications that are not only visually
+                    appealing but also efficient and user-friendly.</p>
+
+                <p>As a B.Tech student in IT, my academic journey complements my practical experience, providing me with
+                    a
+                    solid foundation in programming, databases, and software engineering principles. My education at
+                    Government Polytechnic Tarabganj Gonda has further strengthened my analytical thinking and
+                    problem-solving abilities.</p>
+
+                <p>Beyond just coding, I have a keen interest in best practices for software development, including
+                    clean
+                    code, design patterns, and performance optimization. My adaptability allows me to quickly learn and
+                    integrate emerging technologies into my projects, making me a valuable asset in any development
+                    environment.</p>
+            </div>
+
+
+
+
+        </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Education Section -->
+    <section id="education" class="container py-5 text-light ps-4" data-aos="fade-up">
+        <h2 class="section-title text-center  mb-4">My Education</h2>
+        <div class="mb-3">
+            <h5 class="text-white">B.Tech in Information Technology (Lateral Entry) — <span
+                    class="bg-neon-yellow">Pursuing</span></h5>
+            <p>Dr. APJ Abdul Kalam Technical University (AKTU), 2024</p>
+        </div>
+        <div class="mb-3">
+            <h5 class="text-white">Diploma in Computer Science & Engineering</h5>
+            <p>Government Polytechnic, Aadampur Tarabganj Gonda — <strong class="neon-yellow">Completed First Division
+                    (2024)</strong></p>
+        </div>
+        <div class="mb-3">
+            <h5 class="text-white">Intermediate (UP Board)</h5>
+            <p>First Division – 2021</p>
+        </div>
+        <div>
+            <h5 class="text-white">High School (ICSE Board)</h5>
+            <p>Second Division – 2016</p>
+        </div>
+    </section>
+    <!-- End Education -->
+
+    <!-- Technical Skills -->
+    <section id="skills" class="container py-5 text-light ps-4" data-aos="fade-up">
+        <h2 class="section-title text-center mb-4">Technical Skills</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="neon-yellow ">🧑‍💻Frontend:</h3>
+                <p>HTML, CSS, JavaScript, Bootstrap, Media Queries in CSS,Figma, AOS, jQuery</p>
+                <h3 class="neon-yellow ">💻 Backend:</h3>
+                <p>PHP Core, Laravel, .NET MVC, AJAX, JSON, API Development</p>
+                <h3 class="text-wneon-yellow">Databases:</h3>
+                <p>MySQL, SQLite, Microsoft SQL Server</p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="neon-yellow ">🔄 Languages:</h3>
+                <p>C, PHP, C# (.NET)</p>
+                <h3 class="neon-yellow ">🛡️Networking & Security:</h3>
+                <p>CCC, Networking Basics</p>
+                <h3 class="neon-yellow ">🤖AI Tools:</h3>
+                <p>ChatGPT, GitHub, Copilot</p>
+            </div>
+            <div class="col-md-6">
+                <h3 class="neon-yellow ">📱APIs & Web Communication:</h3>
+                <li>REST API</li>
+                <li>Api Intrigation</li>
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="section-title text-start">
+                    <h3>🔐 Authentication & Security</h3>
+                </div>
+                <ul>
+                    <li>JWT (JSON Web Tokens)</li>
+                    <li>OAuth (Google, Facebook login)</li>
+                    <li>Bcrypt (password hashing)</li>
+                    <li>CSRF/XSS Protection</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="section-title text-start">
+                    <h3>📦 Package Managers & Build Tools</h3>
+                </div>
+                <ul>
+                    <li>composer (PHP)</li>
+
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="section-title text-start">
+                    <h3>☁️ Cloud & Hosting</h3>
+                </div>
+                <ul>
+                    <li>AWS, Azure, Google Cloud</li>
+                    <li>GitHub , Netlify (for full-stack)</li>
+                    <li>Hostinger</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="section-title text-start">
+                    <h3>🔍 Testing & Debugging Tools</h3>
+                </div>
+                <ul>
+                    <li>Postman – API testing</li>
+                    <li>Thunder – API testing</li>
+                    <li>Swagger – API documentation & testing</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="section-title text-start">
+                    <h3>🧱 Common Backend Features</h3>
+                </div>
+                <ul>
+                    <li>User Authentication & Authorization</li>
+                    <li>CRUD Operations (Create,Insert, Read, Update, Delete,Joint)</li>
+                    <li>File Uploads</li>
+                    <li>Email Notifications</li>
+                    <li>Background Jobs (e.g., queues)</li>
+                    <li>Search & Filter</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--End Technical Skills -->
+
+    <!-- Tools & Technologies -->
+    <section id="tools" class="container py-5 text-light" data-aos="fade-up">
+        <h2 class="section-title text-center  mb-4">🛠️Tools & Technologies</h2>
+        <ul>
+            <li>Version Control: GitHub, Netlify</li>
+            <li>Design: Canva, Figma</li>
+            <li>API Testing: Postman, Thunder</li>
+            <li>IDEs: VS Code, Visual Studio 2022, XAMPP</li>
+            <li>Office Tools: MS Office Suite</li>
+        </ul>
+    </section>
+    <!-- End Tools & Technologies -->
+
+
+    <!-- Work Experience -->
+    <section id="experience" class="container py-5 text-light ps-3" data-aos="fade-up">
+        <h2 class="section-title text-center mb-4">💼Work Experience</h2>
+        <h5 class="text-white">Web Developer (Full-time) – Ekana Technology Pvt. Ltd, Lucknow</h5>
+        <ul>
+            <li>Developed and maintained applications using PHP Laravel.</li>
+            <li>Implemented secure authentication and optimized database performance.</li>
+            <li>Built responsive and user-friendly UIs.</li>
+            <li>Integrated APIs and backend services.</li>
+        </ul>
+    </section>
+    <!-- End Work Experience -->
+
+
+    <!-- Internships & Training -->
+    <section id="internships" class="container py-5 text-light ps-4" data-aos="fade-up">
+        <h2 class="section-title text-center  mb-4">🎯Internships & Training</h2>
+        <h5 class="text-white">👨‍💼Intern – PHP Laravel Development, Ekana Technology</h5>
+        <li>Worked on LMS and e-commerce projects, CRUD operations, API integrations.</li>
+        <br />
+        <h5 class="text-white">📚Summer Training – .NET MVC, Techpile Technology Pvt. Ltd</h5>
+        <li>Developed e-commerce and LMS projects using Laravel and .NET MVC. Gained hands-on experience in architecture
+            and
+            database handling.</li>
+        <br />
+        <h5><strong>🧑‍💻Advanced Diploma in Computer Management (15 Months) – A++ Grade</strong></h5>
+    </section>
+    <!-- End Internships & Training -->
+
+    <!-- Certifications -->
+    <section id="certifications" class="container py-5 text-light" data-aos="fade-up">
+        <h2 class="section-title text-center mb-4">📜Certifications</h2>
+        <ul>
+            <li>.NET MVC</li>
+            <li>PHP Laravel</li>
+            <li>CCC (Course on Computer Concepts)</li>
+            <li>ADCM (Advanced Diploma in Computer Management)</li>
+            <li>Workshops: Python, Android & IoT, C, PHP</li>
+        </ul>
+    </section>
+    <!-- End Certifications -->
+
+    <!-- Projects -->
+    <section id="projects" class="container py-5 text-light" data-aos="fade-up">
+        <h2 class="section-title text-center mb-4">📁Projects</h2>
+        <ul>
+            <li>Live Project at Ekana Technologies (PHP Laravel)</li>
+            <li>10MinZepto E-Commerce (.NET MVC)</li>
+            <li>Ondjango LMS (PHP Laravel)</li>
+            <li>Organic Foods Grocery (PHP Laravel)</li>
+            <li>Ekana Technology Website (HTML/CSS/JS)</li>
+            <li>10+ JavaScript Mini Projects</li>
+            <li>10+ Frontend Mini Projects</li>
+            <li>10+ CRUD Projects (PHP Core & Laravel)</li>
+        </ul>
+    </section>
+    <!-- End Projects -->
+
+    <!-- Personal Information -->
+    <section id="personal-info" class="container py-5 text-light ps-5" data-aos="fade-up">
+        <h2 class="section-title text-center  mb-4">🧑‍💼Personal Information</h2>
+        <!-- <div class="row justify-content-center"> -->
+        <div class="col-md-6">
+            <ul class="list-group  text-light">
+                <li class=" ">
+                    <strong>Father’s Name :</strong> Dharnee Dhar Pandey
+                </li>
+                <li class=" ">
+                    <strong>Mother’s Name :</strong> Rita Pandey
+                <li class=" ">
+                    <strong>Date of Birth :</strong> 24-03-2001
+                </li>
+                <li class=" ">
+                    <strong>Nationality :</strong> Indian
+                </li>
+                <li class=" ">
+                    <strong>Languages :</strong> Hindi, English
+                </li>
+                <li class=" ">
+                    <strong>Hobbies :</strong> Playing Volleyball, Exploring New Technologies
+                </li>
+            </ul>
+        </div>
+        <!-- </div> -->
+    </section>
+
+    <!--Personal Information -->
+
+
+
+    <!-- Contect -->
+    <section id="contact" class="container mt-5 text-light ps-4" data-aos="fade-up">
+        <h2 class="section-title">📞Contact Me</h2>
+        <li class="mb-3"> <i class="fas fa-envelope" style="font-size:30px; color:#940f0f;"></i> Email : <a
+                href="mailto:goluakhi@gmail.com">goluakhi@gmail.com</a></li>
+        <li class="mb-3"><i class="fab fa-github" style="font-size:24px;"></i> GitHub : <a
+                href="https://github.com/akhileshpandey98" target="_blank"> GitHub Profile</a></li>
+        <li class="mb-3"> <i class="fab fa-linkedin" style="font-size:30px; color:#0A66C2;"></i>
+            LinkedIn : <a href="https://in.linkedin.com/in/akhilesh-pandey-027324287" target="_blank"> LinkedIn
+                Profile</a>
+        </li>
+    </section>
+    <!-- End Contect -->
+
+    <!-- Download CV -->
+    <section>
+        <div class="container">
+            <section class="text-center neon-yellow  py-5">
+                <a href="akhilesh_pandey_php_laravel_cv.pdf" class="download-btn btn btn-outline-light col-sm-3 fs-2"
+                    download>📥Download CV</a>
+            </section>
+        </div>
+
+    </section>
+    <!-- End Download CV -->
+
+    <!-- Footer Section -->
+    <footer class=" text-white text-center py-3 mt-5">
+        &copy; 2025 Akhilesh Pandey | All Rights Reserved
+    </footer>
+
+
+
+
+    <!-- <h1 class="neon-yellow ">Hai i am akhilesh pandey</h1> -->
+    <!-- End Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+
+    <script>
+        const colors = ['rgba(135,206,250,0.5)', 'rgba(173,216,230,0.6)', 'rgba(0,191,255,0.4)'];
+
+        function createBubble() {
+            const bubble = document.createElement('div');
+            const size = Math.random() * 40 + 10; // Bubble size between 10px and 50px
+            bubble.classList.add('bubble');
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+            bubble.style.left = `${Math.random() * window.innerWidth}px`;
+            bubble.style.animationDuration = `${Math.random() * 5 + 4}s`;
+            bubble.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+            document.body.appendChild(bubble);
+
+            setTimeout(() => {
+                bubble.remove();
+            }, 10000);
+        }
+
+        setInterval(createBubble, 200);
+    </script>
+
+</body>
+
+</html>
